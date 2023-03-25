@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/homepage_screen.dart';
+import './screens/categories_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(
-        title: 'DeliMeals',
-      ),
+      home: const CategoriesScreen(),
     );
   }
 }
