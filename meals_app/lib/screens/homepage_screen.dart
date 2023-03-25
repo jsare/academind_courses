@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: const Center(
         child: Text(
-          'You have pushed the button this many times:',
+          'Navigation Time',
         ),
       ),
     );
