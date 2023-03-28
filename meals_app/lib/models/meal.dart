@@ -1,13 +1,33 @@
+// enum Complexity {
+//   simple,
+//   challenging,
+//   hard,
+// }
+
 enum Complexity {
-  simple,
-  challenging,
-  hard,
+  simple('Simple'),
+  challenging('Challenging'),
+  hard('Hard');
+
+  final String value;
+
+  const Complexity(this.value);
 }
 
+// enum Afforfability {
+//   affordable,
+//   pricey,
+//   luxurious,
+// }
+
 enum Afforfability {
-  affordable,
-  pricey,
-  luxurious,
+  affordable('Affordable'),
+  pricey('Pricey'),
+  luxurious('Luxurios');
+
+  final String value;
+
+  const Afforfability(this.value);
 }
 
 class Meal {
