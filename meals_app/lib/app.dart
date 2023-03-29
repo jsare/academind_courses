@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/screens/category_meals_screen.dart';
 
 import './screens/categories_screen.dart';
+import './screens/category_meals_screen.dart';
+import './screens/meal_detail_screen.dart';
+import './screens/tabs_screen.dart';
+import './screens/filters_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'DeliMeals',
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.blue,
         canvasColor: const Color.fromRGBO(225, 254, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
@@ -30,9 +33,19 @@ class MyApp extends StatelessWidget {
       // For Option 1
       // home: const CategoriesScreen(),
       routes: {
-        '/': (ctx) => const CategoriesScreen(),
-        CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
+        '/': (ctx) => const TabsScreen(),
         // '/category-meals' : (ctx) => const CategoryMealsScreen(), // Option 1
+        CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
+        MealDetailScreen.routeName: (ctx) => const MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => const FiltersScreen(),
+      },
+      onGenerateRoute: (settings) {
+        // ignore: avoid_print
+        print(settings.arguments);
+        return null;
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => const CategoriesScreen());
       },
     );
   }
