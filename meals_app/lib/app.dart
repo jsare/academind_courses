@@ -5,6 +5,7 @@ import './screens/category_meals_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/tabs_screen.dart';
 import './screens/filters_screen.dart';
+import './screens/favorites_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => const MealDetailScreen(),
         FiltersScreen.routeName: (ctx) => const FiltersScreen(),
+        FavoriteScreen.routeName: (ctx) => const FavoriteScreen(),
       },
       onGenerateRoute: (settings) {
         // ignore: avoid_print
