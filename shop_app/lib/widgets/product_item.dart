@@ -13,33 +13,38 @@ class ProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridTile(
-      footer: GridTileBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.favorite),
-        ),
-        backgroundColor:
-            Theme.of(context).colorScheme.onSurfaceVariant.withOpacity(0.54),
-        title: Text(
-          title,
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            color: Theme.of(context).colorScheme.surface,
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
+      child: GridTile(
+        footer: GridTileBar(
+          leading: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.favorite),
+            color: Theme.of(context).colorScheme.secondaryContainer,
           ),
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          textScaleFactor: 0.8,
+          backgroundColor:
+              Theme.of(context).colorScheme.scrim.withOpacity(0.87),
+          title: Text(
+            title,
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.surface,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            textScaleFactor: 0.8,
+          ),
+          trailing: IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.shopping_cart),
+            color: Theme.of(context).colorScheme.secondaryContainer,
+          ),
         ),
-        trailing: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.shopping_cart),
+        child: Image.network(
+          imageUrl,
+          fit: BoxFit.cover,
         ),
-      ),
-      child: Image.network(
-        imageUrl,
-        fit: BoxFit.cover,
       ),
     );
   }

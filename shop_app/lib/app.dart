@@ -10,7 +10,9 @@ class ShopApp extends StatelessWidget {
     return MaterialApp(
       title: 'Shop App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.purple,
+        fontFamily: 'Lato',
       ),
       home: ProductsOverwiewScreen(),
     );
