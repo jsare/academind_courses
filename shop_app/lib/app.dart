@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home_screen.dart';
+import 'screens/products_overview_screen.dart';
 
 class ShopApp extends StatelessWidget {
   const ShopApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,7 +12,7 @@ class ShopApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: ProductsOverwiewScreen(),
     );
   }
 }
